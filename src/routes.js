@@ -2,12 +2,12 @@
  * Contains all application endpoints
  */
 
-import TestController from './controllers/TestController';
+import AnalyzeToneController from './controllers/AnalyzeToneController';
 
 export default {
-  '/test': {
+  '/translate': {
     get: {
-      method: TestController.testMethod,
+      method: AnalyzeToneController.analyzeTone,
       public: true,
     },
   },

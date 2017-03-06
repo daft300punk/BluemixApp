@@ -15,6 +15,8 @@ import logger from './common/logger';
 
 const app = express();
 app.set('port', config.PORT);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 
 app.use(cors());
 app.use(bodyParser.json());
