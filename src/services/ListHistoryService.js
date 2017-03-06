@@ -4,6 +4,7 @@ import Joi from 'joi';
 
 const ListHistoryService = {
   listHistory,
+  findTotalRecordsInDb
 };;
 
 decorate(ListHistoryService, 'ListHistoryService');
@@ -49,4 +50,8 @@ function getRecord(id) {
 listHistory.params = ['num'];
 listHistory.schema = {
   num: Joi.number(),
+}
+
+findTotalRecordsInDb.schema = {
+  
 }
