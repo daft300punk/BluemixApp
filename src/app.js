@@ -22,6 +22,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(domainMiddleware);
+app.use('/api', express.static('src/public'));
 
 
 const apiRouter = new express.Router();
