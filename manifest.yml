@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: eu-gb.mybluemix.net
-  name: sky-bluemix-starter-2
-  host: sky-bluemix-starter-2
-  disk_quota: 1024M
+  name: tc-daft300punk-02translate
+  host: tc-daft300punk-02translate
+  disk_quota: 2048M

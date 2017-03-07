@@ -15,7 +15,7 @@ export default AnalyzeToneService;
 
 var tone_analyzer = new ToneAnalyzer({
   username: process.env.TONEANALYZER_USERNAME,
-  password: process.env.TONEaNALYZER_PASSWORD,
+  password: process.env.TONEANALYZER_PASSWORD,
   version: 'v3',
   version_date: '2016-05-19',
 });

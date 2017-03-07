@@ -13,7 +13,7 @@ async function analyzeTone(req, res) {
   var inputString = req.query['inputString'];
   var destinationLang = req.query['selectedLang'];
 
-  if(inputString != null) {
+  if (inputString != null) {
     var translatedString = await TranslateTextService.translateText(inputString, destinationLang);
     var analyzedToneObject = await AnalyzeToneService.analyzeTone(inputString);
     var analyzedToneString = "";
@@ -29,5 +29,5 @@ async function analyzeTone(req, res) {
     console.log("recordInserted", recordToBeInserted);
     var recordInserted = await InsertHistoryService.insertHistory(recordToBeInserted);
   }
-  res.render('index', {result: analyzedToneString, availableLangArray: availableLang.languages, translatedText: translatedString});
+  res.render('index', { result: analyzedToneString, availableLangArray: availableLang.languages, translatedText: translatedString });
 }

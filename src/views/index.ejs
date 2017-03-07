@@ -1,3 +1,5 @@
+<% include ./header %>
+
 <form method="get" action="/api/translate" id="form">
   Enter Source String <input type="text" name="inputString"><br>
   Destination Language 
@@ -12,5 +14,11 @@
   <button type="submit">Submit</button>
 </form>
 
-<%= translatedText %><br>
-<%= result %>
+Translated Text: <%= translatedText %><br>
+
+<% if(result != null) { %>
+  Parameters<br>
+  <%= result %>
+<% }; %>
+
+
