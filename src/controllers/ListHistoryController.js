@@ -5,5 +5,7 @@ export default {
 }
 
 async function listHistory(req, res) {
-  res.send(await ListHistoryService.listHistory());
+  const historyObject = await ListHistoryService.listHistory();
+  var historyData = historyObject.map((history) => { return history.rec; });
+  res.render('history', {historyData});
 }

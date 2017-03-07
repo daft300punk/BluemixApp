@@ -1,0 +1,13 @@
+<% include ./header %>
+
+<div class="history-wrapper">
+  <div id="img"><img src="img/img1.jpg"></div>
+  <% if( historyData != null ){
+    for(var i = 0; i < historyData.length; i++) { %>
+      <h2>Record: <%= i + 1 %></h2>
+      Input String: <%= historyData[i].inputString %><br>
+      Destination Language <%= historyData[i].destinationLang %><br>
+      Translated String <%= historyData[i].translatedString %><br>
+  <% }
+  } %>
+</div>
