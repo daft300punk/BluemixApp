@@ -2,9 +2,9 @@
 
 <div class="form-wrapper">
   <div id="img"><img src="img/img1.jpg"></div>
-  <form method="get" action="/api/translate" class="form">
+  <form method="get" action="/api/translate" id="form">
     <div class="text-input-hint">Enter Source String</div>
-    <input type="text" name="inputString" class="input-source">
+    <input type="text" name="inputString" class="input-source" required>
     <div class="text-input-hint">Destination Language</div> 
     <select name="selectedLang" form="form" class="input-source">
         <%
@@ -16,16 +16,19 @@
     </select><br>
     <button type="submit" class="btn-sub">Submit</button>
   </form>
+
+  <div class="results">
+    <% if(translatedText != null) { %>
+      <div class="result-text-header">Results</div>
+      <div class="result-text">Translated Text:</div>
+      <div class="translated-text">
+        <%= translatedText %>
+      </div>
+    <% }; %>
+    
+    <% if(result != null) { %>
+      <div class="result-text">Parameters:</div>
+      <div class="translated-text"><%= result %></div>
+    <% }; %>
+  </div>
 </div>
-
-<% if(translatedText != null) { %>
-  Translated Text:<br>
-  <%= translatedText %><br>
-<% }; %>
- 
-<% if(result != null) { %>
-  Parameters<br>
-  <%= result %>
-<% }; %>
-
-

@@ -12,6 +12,7 @@ async function analyzeTone(req, res) {
 
   var inputString = req.query['inputString'];
   var destinationLang = req.query['selectedLang'];
+  console.log(destinationLang);
 
   if (inputString != null) {
     var translatedString = await TranslateTextService.translateText(inputString, destinationLang);
