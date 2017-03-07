@@ -14,8 +14,11 @@
   <button type="submit">Submit</button>
 </form>
 
-Translated Text: <%= translatedText %><br>
-
+<% if(translatedText != null) { %>
+  Translated Text:<br>
+  <%= translatedText %><br>
+<% }; %>
+ 
 <% if(result != null) { %>
   Parameters<br>
   <%= result %>
