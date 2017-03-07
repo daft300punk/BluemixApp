@@ -5,7 +5,7 @@
   Destination Language 
   <select name="selectedLang" form="form">
       <%
-        for (let i = 0; i < availableLangArray.length; i++)
+        for (var i = 0; i < availableLangArray.length; i++)
         {
           %><option value="<%= availableLangArray[i].language %>"><%= availableLangArray[i].name %></option><%
         }

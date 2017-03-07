@@ -28,6 +28,7 @@ const apiRouter = new express.Router();
 
 loadRoutes(apiRouter, routes);
 
+app.get('/', function(req, res) { res.redirect('/api/translate')});
 app.use('/api', apiRouter);
 
 app.use(errorHandler({
