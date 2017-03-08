@@ -6,7 +6,7 @@ export default {
 
 async function listHistory(req, res) {
   try {
-    let getHistNum = req.query['getHistNum'];
+    let getHistNum = req.query['getHistNum'] || 5;
     console.log(getHistNum);
     if(getHistNum != null) {
       const historyObject = await ListHistoryService.listHistory(getHistNum);
