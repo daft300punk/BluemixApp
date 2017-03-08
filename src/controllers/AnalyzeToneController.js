@@ -34,7 +34,7 @@ async function analyzeTone(req, res) {
     res.render('index', { result: analyzedToneString, availableLangArray: availableLang.languages, translatedText: translatedString });
   } catch(err) {
     console.log("Error", err.error_code, err.error_message);
-    let error_msg = `Error Code: ${err.error_code} <br> Error Message: ${err.error_message}`
+    let error_msg = `Error Code: ${err.error_code} <br> Error Message: ${err.error_message}`;
     res.send(error_msg);
   }
 }
