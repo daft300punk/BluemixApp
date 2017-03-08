@@ -127,3 +127,21 @@ body {
   background: white;
   margin-bottom: 12px;
 }
+
+#history-form {
+  padding-left: 30px;
+}
+
+#history-form h3 {
+  margin-bottom: 12px;
+}
+
+#history-form button {
+  float: none;
+  width: 60px;
+}
+
+#history-form input {
+  width: 100px;
+}
+

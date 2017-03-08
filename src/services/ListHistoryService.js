@@ -21,7 +21,7 @@ async function listHistory(num = 5) {
   var recordsInDb = await findTotalRecordsInDb();
   console.log("records in db", recordsInDb);
   var result = [];
-  for (let i = recordsInDb; i > 0 && recordsInDb - i < 5; i--) {
+  for (let i = recordsInDb; i > 0 && recordsInDb - i < num; i--) {
     result = result.concat(await getRecord(i));
   }
   return result;
