@@ -1,13 +1,20 @@
 <% include ./header %>
 
-<div class="history-wrapper">
+<div class="wrapper history">
   <div id="img"><img src="img/img1.jpg"></div>
-  <% if( historyData != null ){
-    for(var i = 0; i < historyData.length; i++) { %>
-      <h2>Record: <%= i + 1 %></h2>
-      Input String: <%= historyData[i].inputString %><br>
-      Destination Language <%= historyData[i].destinationLang %><br>
-      Translated String <%= historyData[i].translatedString %><br>
-  <% }
-  } %>
+  <% if( historyData != null ){ %>
+    <div class="history-content">
+    <h2>Showing Last <%= historyData.length %> Record History</h2>
+    <% for(var i = 0; i < historyData.length; i++) { %>
+        <div class="history-item">
+          <h4>Record: <%= i + 1 %></h4>
+          <div class="history-item-body">
+            <strong>Input String:</strong> <%= historyData[i].inputString %><br>
+            <strong>Destination Languag:</strong> <%= historyData[i].destinationLang %><br>
+            <strong>Translated String:</strong> <%= historyData[i].translatedString %><br>
+          </div>
+        </div>
+    <% } %>
+    </div>
+  <% } %>
 </div>
